@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/edit.js' %}"></script>
+</head>
+<body>
+    {% if ERROR %}
+        <h1>エラー</h1>
+        <h2>何らかの異常が発生しました</h2>
+    {% else %}
+        <h1>ファイル名:{{pass}}</h1>
+        <input type="hidden" value="{{pass}}" id="pass">
+        <textarea id="edit-file" cols="100" rows="25">{{file}}</textarea>
+        <button id="change">変更</button>    
+    {% endif %}
+</body>
+</html>
