@@ -1,0 +1,7 @@
+input,textarea{
+    display: block;
+}
+
+#change{
+    transform: translateX(50%);
+}

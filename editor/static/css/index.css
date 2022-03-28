@@ -1,0 +1,25 @@
+input{
+    display: block;
+    transform: translateX(15%);
+}
+
+form{
+    width: 100%;
+}
+
+#submit{
+    transform: translateX(50%);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 4vh;
+}
+
+#file{
+    margin-bottom: 3px;
+    height: 10vh;
+    font-size: 5vh;
+}
+
+h1{
+    text-align: center;
+}
