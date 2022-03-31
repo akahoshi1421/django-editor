@@ -1,5 +1,7 @@
-//エディタ用のテストプログラム
+//エディタ用のテストプログラム(JavaScript)
 function aaa()
 {
     console.log("hello world");
 }
+
+aaa();

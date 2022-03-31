@@ -1,7 +1,46 @@
-input,textarea{
+textarea{
     display: block;
 }
 
 #change{
-    transform: translateX(50%);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.alt{
+    display: none;
+    position: absolute;
+    top: 20px;
+    width: 80%;
+    height: 10vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+button{
+    display: inline-block;
+}
+
+.output{
+    margin-top: 30px;
+    min-height: 10vh;
+    width: 100%;
+    background-color: rgb(190, 188, 188);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.output code{
+    white-space: pre-line;
+    font-size: 3vh;
+}
+
+#py,
+#gcc,
+#c,
+#js{
+    display: none;
 }
