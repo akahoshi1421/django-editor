@@ -44,3 +44,16 @@ button{
 #js{
     display: none;
 }
+
+.filenames{
+    margin-bottom: 10px;
+}
+
+#filechange{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.notview{
+    display: none;
+}

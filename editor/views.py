@@ -1,9 +1,11 @@
 from cgitb import text
+from unittest import result
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from subprocess import run, check_output, STDOUT
 import sys
+from os import rename
 
 # Create your views here.
 def index(request):
@@ -82,3 +84,15 @@ def js(request):
         return JsonResponse(result)
     
     return JsonResponse({"res": "ERROR"})
+
+
+@csrf_exempt
+def filenamechange(request):
+    if request.method == "POST":
+        newpass = request.POST["newpass"]
+        oldpass = request.POST["oldpass"]
+        rename(oldpass, newpass)
+        result = {"res": "SUCCESS"}
+        return JsonResponse(result)
+
+    return JsonResponse({"res": "ERROR"}) 

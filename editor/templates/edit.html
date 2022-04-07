@@ -17,6 +17,21 @@
         {% else %}
             <h1>ファイル名:<span>{{pass}}</span></h1>
             <input type="hidden" value="{{pass}}" id="pass">
+            <div class="filenames">
+                <label for="filechange">ファイル名の変更</label>
+                <input type="text" value="{{pass}}" id="filechange">
+                <button id="filechange-btn" class="btn btn-danger">変更</button>
+            </div>
+            
+            <div class="notview">
+                <form action="{% url 'edit' %}" method="post">
+                    {% csrf_token %}
+                    <input id="file" type="text" name="filepass">
+                    <input type="submit" value="編集" id="submit">
+                </form>
+            </div>
+
+            
             <textarea id="edit-file" cols="100" rows="15">{{file}}</textarea>
             <button id="change" class="btn btn-success">保存</button>
             <button id="py" class="btn btn-info w-25">Pythonを実行</button>    
